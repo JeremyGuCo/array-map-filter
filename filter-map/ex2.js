@@ -25,6 +25,15 @@ Sortie attendue:
 */
 
 function getCampusesTeachingReact(campuses) {
-}
+  const campus = campuses.filter(function(form){
+    if (form.curriculums = 'JS/React')
+    {
+      return form.city}
+    })
+    .map(function(form) {
+      return form.city;
+  }); return campus
+  }
+
 
 module.exports = getCampusesTeachingReact;
