@@ -79,19 +79,6 @@ const persons = [
 
 function getActivitiesMembers(activities, persons) {
 
-  // Map all activities and create a new object for each 
-  return activities.map(function(activity) {
-    // in the new object add an activity key and a persons key
-    return {activity: activity.activity, persons:
-      // in the person key, filter the persons activities
-      persons.filter(function(person) {
-        // Keep only the persons with they activities includes current activity
-        return person.activities.includes(activity.activity);
-        // on persons array keep only name
-      }).map(function(person) {
-        return person.name;
-      })
-    }
-});}
+}
 
 module.exports = getActivitiesMembers;
