@@ -51,6 +51,15 @@ Sortie attendue:
 */
 
 function getStudentsPerCurriculum(campuses, curriculumName) {
-}
+  const result=campuses.filter(function(form){
+  if (form.curriculums[0].name===curriculumName){
+    return form.city
+  }})
+ return result.map(function(formName){
+   let goodForm ={};
+   let goodCity=formName.city;
+  goodForm[goodCity]=formName.curriculums[0].numStudents;
+   return goodForm;
+ });}
 
 module.exports = getStudentsPerCurriculum;
